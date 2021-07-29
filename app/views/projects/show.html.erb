@@ -1,0 +1,18 @@
+<div class="container pt-5">
+    <% if @project.errors.any? %>
+    <div id="error_explanation">
+        <h2><%= pluralize(@project.errors.count, "error") %> Error al crear el proyecto</h2>
+        <ul>
+            <% @project.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+        <button type="submit" class="btn btn-light"><%= link_to "Volver", projects_index_path%></button>
+    </div>
+    <% else %>
+        <h2>Proyecto creado con exito</h2>
+        <hr>
+        <button type="submit" class="btn btn-light"><%= link_to "Ver Proyectos Creados", projects_dashboard_path%></button>
+        <button type="submit" class="btn btn-light"><%= link_to "Crear nuevo proyecto", projects_index_path%></button>
+    <% end %>
+</div>

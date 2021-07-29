@@ -1,0 +1,36 @@
+<div class="container pt-5">
+    
+    <button  class="btn btn-ligth mt"><%= link_to "Ver Proyectos Creados", projects_dashboard_path%></button>
+    <hr>
+    <h2>Crear Proyecto</h2>
+
+    <form id="create_projects" method="get" action="/projects/show">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input name="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="description">Descripcion</label>
+            <input name="description" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="stardate">Fecha Comienzo</label>
+            <input name="stardate" type="date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="endate">Fecha Término</label>
+            <input name="endate" type="date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="status">Estado</label>
+            <select name="status" id="" class="form-control">
+                <option value="">Sin Estado</option>
+                <option value="propuesta">Propuesta</option>
+                <option value="en progreso">En progreso</option>
+                <option value="terminado">Terminado</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary ">Crear</button>
+    </form>
+</div>
